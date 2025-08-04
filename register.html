@@ -1,0 +1,50 @@
+<section id="register" style="padding: 5rem 2rem; max-width: 500px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Регистрация</h2>
+    <form id="registrationForm">
+        <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; margin-bottom: 0.5rem;">Имя пользователя</label>
+            <input type="text" id="username" required 
+                   style="width: 100%; padding: 0.8rem; border-radius: 0.5rem; border: 1px solid #334155; background: #1e293b; color: white;">
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; margin-bottom: 0.5rem;">Email</label>
+            <input type="email" id="email" required 
+                   style="width: 100%; padding: 0.8rem; border-radius: 0.5rem; border: 1px solid #334155; background: #1e293b; color: white;">
+        </div>
+        <div style="margin-bottom: 2rem;">
+            <label style="display: block; margin-bottom: 0.5rem;">Пароль</label>
+            <input type="password" id="password" required 
+                   style="width: 100%; padding: 0.8rem; border-radius: 0.5rem; border: 1px solid #334155; background: #1e293b; color: white;">
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Зарегистрироваться</button>
+    </form>
+</section>
+
+<script>
+document.getElementById('registrationForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const userData = {
+        username: document.getElementById('username').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+    };
+    
+    try {
+        const response = await fetch('ВАШ_GOOGLE_APPS_SCRIPT_URL', {
+            method: 'POST',
+            body: JSON.stringify(userData)
+        });
+        
+        if(response.ok) {
+            alert('Регистрация успешна!');
+            window.location.href = 'profile.html';
+        } else {
+            alert('Ошибка регистрации');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Серверная ошибка');
+    }
+});
+</script>
