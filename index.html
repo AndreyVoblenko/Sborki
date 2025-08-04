@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBuilds - Скачать сборки</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e40af);
+            color: var(--light);
+            min-height: 100vh;
+        }
+        header {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+        nav a:hover {
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+        }
+        .hero {
+            max-width: 1200px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #93c5fd, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #cbd5e1;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+        }
+        .support {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">GameBuilds</div>
+        <nav>
+            <ul>
+                <li><a href="#downloads">Сборки</a></li>
+                <li><a href="#register">Регистрация</a></li>
+                <li><a href="#about">О проекте</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Премиум сборки игр</h1>
+        <p>Скачивайте эксклюзивные игровые сборки с максимальной оптимизацией. Регистрируйтесь для доступа к закрытому контенту.</p>
+        <a href="#downloads" class="btn">Смотреть сборки</a>
+    </section>
+
+    <footer>
+        <p>© 2023 GameBuilds. Все права защищены.</p>
+        <p class="support">Нашли ошибку? Пишите в Telegram: 
+            <a href="https://t.me/fnbjdnfn" style="color:#60a5fa;text-decoration:none">@fnbjdnfn</a>
+        </p>
+    </footer>
+</body>
+</html>
